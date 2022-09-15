@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/oneFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/oneFragment"
@@ -19,4 +19,8 @@
         android:name="de.syntaxinstitut.happycake.ui.two.TwoFragment"
         android:label="TwoFragment"
         tools:layout="@layout/fragment_two"/>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="de.syntaxinstitut.happycake.ui.HomeFragment"
+        android:label="HomeFragment" />
 </navigation>
