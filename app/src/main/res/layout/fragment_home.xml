@@ -46,9 +46,9 @@
 
             <TextView
                 android:id="@+id/ChooseYourCake"
-                android:layout_width="342dp"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:alpha="1"
+                android:alpha="2"
                 android:fontFamily="serif"
                 android:rotation="2"
                 android:rotationX="4"

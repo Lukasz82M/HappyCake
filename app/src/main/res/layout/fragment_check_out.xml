@@ -12,13 +12,34 @@
 
         <ImageView
             android:id="@+id/backgroundCheckOut"
-            android:layout_width="425dp"
-            android:layout_height="754dp"
+            android:layout_width="419dp"
+            android:layout_height="798dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/onboarding_welcome"
             tools:scaleType="fitXY" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#70000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backgroundCheckOut"
+            app:layout_constraintVertical_bias="0.08">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Check your Order"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="normal|bold|italic" />
+        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
