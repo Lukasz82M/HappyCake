@@ -3,35 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/onBoardingFragment2">
-
+    app:startDestination="@id/LoginFragment">
     <fragment
-        android:id="@+id/oneFragment"
-        android:name="de.syntaxinstitut.happycake.ui.one.OneFragment"
-        android:label="OneFragment"
-        tools:layout="@layout/fragment_one">
+        android:id="@+id/LoginFragment"
+        android:name="de.syntaxinstitut.happycake.ui.firebase.LoginFragment"
+        android:label="LoginFragment" >
         <action
-            android:id="@+id/action_oneFragment_to_twoFragment"
-            app:destination="@id/twoFragment" />
+            android:id="@+id/action_LoginFragment_to_homeFragment"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_signUpFragment"
+            app:destination="@id/SignUpFragment" />
     </fragment>
     <fragment
-        android:id="@+id/twoFragment"
-        android:name="de.syntaxinstitut.happycake.ui.two.TwoFragment"
-        android:label="TwoFragment"
-        tools:layout="@layout/fragment_two"/>
-    <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/HomeFragment"
         android:name="de.syntaxinstitut.happycake.ui.HomeFragment"
         android:label="HomeFragment" />
     <fragment
-        android:id="@+id/onBoardingFragment2"
-        android:name="de.syntaxinstitut.happycake.ui.OnBoardingFragment"
-        android:label="OnBoardingFragment" >
-        <action
-            android:id="@+id/action_onBoardingFragment2_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_onBoardingFragment2_to_homeFragment2"
-            app:popUpTo="@id/homeFragment" />
-    </fragment>
+        android:id="@+id/SignUpFragment"
+        android:name="de.syntaxinstitut.happycake.ui.firebase.SignUpFragment"
+        android:label="SignUpFragment" />
 </navigation>
