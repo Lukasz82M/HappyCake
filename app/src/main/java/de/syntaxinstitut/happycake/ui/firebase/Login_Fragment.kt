@@ -1,4 +1,4 @@
-package de.syntaxinstitut.happycake.ui
+package de.syntaxinstitut.happycake.ui.firebase
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "355055081215",
+    "project_id": "happycake-5633d",
+    "storage_bucket": "happycake-5633d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355055081215:android:a41c87679306bc73719eca",
+        "android_client_info": {
+          "package_name": "de.syntaxinstitut.happycake"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355055081215-i9peslcnqnecihegjgohd0v9gmqfnl8c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQyv-TTiCAfLDBPFu_8POOKOrZDh6Itd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "355055081215-i9peslcnqnecihegjgohd0v9gmqfnl8c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
