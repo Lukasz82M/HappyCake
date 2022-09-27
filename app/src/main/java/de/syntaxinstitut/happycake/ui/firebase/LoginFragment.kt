@@ -12,13 +12,29 @@ import androidx.navigation.fragment.findNavController
 import de.syntaxinstitut.happycake.R
 import de.syntaxinstitut.happycake.databinding.FragmentLoginBinding
 
-
+/**
+ * Fragment 1
+ */
 class LoginFragment : Fragment(R.layout.fragment_login_) {
-    private lateinit var binding:FragmentLoginBinding
 
+    /* -------------------- Klassen Variablen -------------------- */
+
+    /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
+    private lateinit var binding:FragmentLoginBinding
+// FEHLT NOCH WAS
+
+    /** Das ViewModel zu diesem Fragment */
     private val viewModel:LoginViewModel by activityViewModels()
 
+/* -------------------- Lifecycle -------------------- */
 
+    /**
+     * Lifecycle Methode wenn das View erstellt wird
+     *
+     * @param inflater                Layout Inflater
+     * @param container               View Gruppe
+     * @param savedInstanceState      Eventuelle saveStates
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,9 +44,17 @@ class LoginFragment : Fragment(R.layout.fragment_login_) {
         return binding.root
     }
 
+
+    /**
+     * Lifecycle Methode nachdem das View erstellt wurde
+     *
+     * @param view                    Das angezeigte View
+     * @param savedInstanceState      Eventuelle saveStates
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        /* -------------------- UI-Interaktionen -------------------- */
         binding.loginButton.setOnClickListener{
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
             val email = binding.editTextUsername.text.toString()
@@ -41,6 +65,10 @@ class LoginFragment : Fragment(R.layout.fragment_login_) {
                 viewModel.login(email, password)
             }
         }
+
+        /* -------------------- Observer -------------------- */
+
+        // Navigation zum zweiten Fragment
         binding.SignUp.setOnClickListener{
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToSignUpFragment())
         }

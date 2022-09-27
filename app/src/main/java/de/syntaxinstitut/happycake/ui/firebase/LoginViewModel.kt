@@ -12,12 +12,15 @@ const val TAG="MAINVIEWMODEL"
 
 class LoginViewModel(application: Application): AndroidViewModel (application){
 
+    //Kommunikartion mit der FirebaseAuth
     private val firebaseAuth = FirebaseAuth.getInstance()
 
+    //currentuser ist null wenn nimand eingeloggt ist
     private val  _currentUser = MutableLiveData<FirebaseUser?>(firebaseAuth.currentUser)
     val currentUser: LiveData<FirebaseUser?>
     get() = _currentUser
 
+    //hier wird versucht einen User zu erstellen und ihn einzuloggen
     fun signUp (email:String, password:String){
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{
             if(it.isSuccessful){
@@ -27,7 +30,9 @@ class LoginViewModel(application: Application): AndroidViewModel (application){
             }
         }
     }
-fun login(email:String, password: String){
+
+    // hier versucht sich ein bestehender User einzuloggen
+    fun login(email:String, password: String){
     firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener{
         if(it.isSuccessful){
             _currentUser.value = firebaseAuth.currentUser
@@ -36,6 +41,8 @@ fun login(email:String, password: String){
         }
     }
 }
+
+    // Hier kann man sich ausloggen, um sich z.B. als anderer User anmelden. !! Wird aber noch nicht benutzt.
     fun logOut(){
         firebaseAuth.signOut()
         _currentUser.value = firebaseAuth.currentUser
