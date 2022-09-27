@@ -51,6 +51,7 @@
                     android:textColor="@color/white"
                     android:textSize="40sp"
                     android:textStyle="normal|bold|italic" />
+
             </androidx.cardview.widget.CardView>
 
             <RadioButton
@@ -60,10 +61,21 @@
                 android:text="Laktosefrei"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.068"
+                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView"
                 app:layout_constraintVertical_bias="0.09" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="403dp"
+                android:layout_height="391dp"
+                android:layout_marginBottom="32dp"
+                app:cardBackgroundColor="#70000000"
+                app:layout_constraintBottom_toTopOf="@+id/weiter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                app:layout_constraintVertical_bias="0.333" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
@@ -72,7 +84,7 @@
                 android:text="Glutenfrei"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.066"
+                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/RadioButton"
                 app:layout_constraintVertical_bias="0.09" />
@@ -84,7 +96,7 @@
                 android:text="Zuckeralternative"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.079"
+                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/radioButton2"
                 app:layout_constraintVertical_bias="0.09" />
@@ -96,7 +108,7 @@
                 android:text="24cm"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/radioButton3"
                 app:layout_constraintVertical_bias="0.09" />
@@ -108,7 +120,7 @@
                 android:text="26cm"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/radioButton4"
                 app:layout_constraintVertical_bias="0.09" />
