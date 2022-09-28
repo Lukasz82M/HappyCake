@@ -21,7 +21,7 @@ class LoginFragment : Fragment(R.layout.fragment_login_) {
 
     /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
     private lateinit var binding:FragmentLoginBinding
-// FEHLT NOCH WAS
+
 
     /** Das ViewModel zu diesem Fragment */
     private val viewModel:LoginViewModel by activityViewModels()

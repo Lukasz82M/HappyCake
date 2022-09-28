@@ -20,8 +20,6 @@ class CakeAdapter(
     private val dataset: List<Cake>
 ) : RecyclerView.Adapter<CakeAdapter.ItemViewHolder>(){
 
-3
-
 
 /**
  * der ViewHolder umfasst die View uns stellt einen Listeneintrag dar
@@ -50,12 +48,13 @@ inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
  */
 override fun onBindViewHolder(holder: CakeAdapter.ItemViewHolder, position: Int) {
     // Setze das richtige Bild und den richtigen Namen
+    val cake = dataset[position]
     holder.ivPicture.setImageResource(dataset[position].imageResId)
     holder.tvName.text = dataset[position].name
 }
 
 //Setze einen onClickListener auf das Layout und navigiere darin zum
-holder.XXXXXXX.setOnClickListener {
+holder.?Cake?.setOnClickListener {
     holder.itemView.findNavController().navigation(
         HomeFragmentDirection.actionHomeFragmentTo
     )
