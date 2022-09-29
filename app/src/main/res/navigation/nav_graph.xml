@@ -18,9 +18,17 @@
     <fragment
         android:id="@+id/HomeFragment"
         android:name="de.syntaxinstitut.happycake.ui.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_HomeFragment_to_cakeDetailFragment"
+            app:destination="@id/cakeDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/SignUpFragment"
         android:name="de.syntaxinstitut.happycake.ui.firebase.SignUpFragment"
         android:label="SignUpFragment" />
+    <fragment
+        android:id="@+id/cakeDetailFragment"
+        android:name="de.syntaxinstitut.happycake.ui.CakeDetailFragment"
+        android:label="CakeDetailFragment" />
 </navigation>
