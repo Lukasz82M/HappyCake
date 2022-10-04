@@ -29,6 +29,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 // wenn die View gebaut wird (ANFANG)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
+//        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
