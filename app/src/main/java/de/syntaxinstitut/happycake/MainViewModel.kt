@@ -6,6 +6,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import de.syntaxinstitut.happycake.adapter.CakeAdapter
+import de.syntaxinstitut.happycake.data.model.Cake
 import kotlinx.coroutines.launch
 import java.lang.Exception
 
@@ -20,7 +22,7 @@ class MainViewModel (application: Application) :AndroidViewModel(application){
 
         private val database = getDatabase(application)
 
-        private val repository = FanRepository(FanApi, database)
+        private val repository = CakeRepository(CakeAdapter, database)
 
 //    private val _fans = MutableLiveData<List<Fan>>()
 //    val fans: LiveData<List<Fan>>
