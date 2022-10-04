@@ -46,6 +46,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     }
 
+    private fun CakeAdapter(): CakeAdapter {
+
+    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of
