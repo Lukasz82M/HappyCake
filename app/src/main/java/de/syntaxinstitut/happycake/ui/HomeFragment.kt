@@ -39,17 +39,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     // Referenz um unseren Adapter zubefüllen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-       binding.recyclerViewProdukte.adapter = CakeAdapter()
-
-        viewModel.
-
+  //    binding.recyclerViewProdukte.adapter = CakeAdapter()
 
 
     }
 
-    private fun CakeAdapter(): CakeAdapter {
+   /* private fun CakeAdapter(): CakeAdapter {
 
-    }
+    }*/
 
     companion object {
         /**

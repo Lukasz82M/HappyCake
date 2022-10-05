@@ -2,64 +2,39 @@ package de.syntaxinstitut.happycake
 
 import android.app.Application
 import android.util.Log
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import de.syntaxinstitut.happycake.adapter.CakeAdapter
 import de.syntaxinstitut.happycake.data.model.Cake
+import de.syntaxinstitut.happycake.remote.CakeApi
+import de.syntaxinstitut.happycake.remote.CakeRepository
 import kotlinx.coroutines.launch
 import java.lang.Exception
 
-class MainViewModel (application: Application) :AndroidViewModel(application){
-    private const val TAG = "MainViewModel"
-
-    enum class ApiStatus { LOADING, ERROR, DONE }
-
-    class MainViewModel(application: Application) : AndroidViewModel(application) {
+private const val TAG = "MainViewModel"
+class MainViewModel : ViewModel() {
 
 //    private val datasource = Datasource()
 
-        private val database = getDatabase(application)
+    private val repository = CakeRepository(CakeApi)
 
-        private val repository = CakeRepository(CakeAdapter, database)
+//    private val _cake = MutableLiveData<List<cake>>()
+//    val cake: LiveData<List<Cake>>
+//        get() = _cake
 
-//    private val _fans = MutableLiveData<List<Fan>>()
-//    val fans: LiveData<List<Fan>>
-//        get() = _fans
+    val cake = repository.cakeList
 
-        val fans = repository.fanList
+    init {
+//        _cake.value = datasource.loadCake()
+        loadData()
+    }
 
-        private val _loading = MutableLiveData<ApiStatus>()
-        val loading: LiveData<ApiStatus>
-            get() = _loading
-
-
-        init {
-//        _fans.value = datasource.loadFans()
-            loadData()
-        }
-
-        private fun loadData() {
-            viewModelScope.launch {
-                _loading.value = ApiStatus.LOADING
-                try {
-                    repository.getFans()
-                    _loading.value = ApiStatus.DONE
-                } catch (e: Exception) {
-                    Log.e(TAG, "Error loading Data from API: $e")
-                    if (fans.value.isNullOrEmpty()) {
-                        _loading.value = ApiStatus.ERROR
-                    } else {
-                        _loading.value = ApiStatus.DONE
-                    }
-                }
-            }
-        }
-
-        fun addToCart() {
-            // TODO
+    private fun loadData() {
+        viewModelScope.launch {
+            repository.getCake()
         }
     }
 
+    fun addToCart() {
+        // TODO
+    }
 }
