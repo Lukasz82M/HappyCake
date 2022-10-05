@@ -48,8 +48,8 @@ class CakeAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         // Setze das richtige Bild und den richtigen Namen
         val cake = dataset[position]
-       holder.ivPicture.setImageResource(cake.imageResId)
-       holder.tvName.text = cake.name
+       holder.ivPicture.setImageResource(dataset[position].imageResId)
+       holder.tvName.text = dataset[position].name
 
         binding.textViewCake.setOnClickListener{holder.itemView.findNavController().navigate(
             HomeFragmentDirections.actionHomeFragmentToCakeDetailFragment()

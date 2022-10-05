@@ -17,11 +17,9 @@ class MainViewModel : ViewModel() {
 
     private val repository = CakeRepository(CakeApi)
 
-//    private val _cake = MutableLiveData<List<cake>>()
-//    val cake: LiveData<List<Cake>>
-//        get() = _cake
-
-    val cake = repository.cakeList
+    private val _cake = MutableLiveData<List<cake>>()
+    val cake: MutableLiveData<List<cake>>
+        get() = _cake
 
     init {
 //        _cake.value = datasource.loadCake()
@@ -37,4 +35,8 @@ class MainViewModel : ViewModel() {
     fun addToCart() {
         // TODO
     }
+}
+
+class cake {
+
 }
