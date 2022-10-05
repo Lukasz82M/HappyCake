@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/LoginFragment">
+    app:startDestination="@id/onBoardingFragment">
     <fragment
         android:id="@+id/LoginFragment"
         android:name="de.syntaxinstitut.happycake.ui.firebase.LoginFragment"
@@ -31,4 +31,30 @@
         android:id="@+id/cakeDetailFragment"
         android:name="de.syntaxinstitut.happycake.ui.CakeDetailFragment"
         android:label="CakeDetailFragment" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="de.syntaxinstitut.happycake.ui.OnBoardingFragment"
+        android:label="OnBoardingFragment" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formularFragment"
+        android:name="de.syntaxinstitut.happycake.ui.FormularFragment"
+        android:label="FormularFragment" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="de.syntaxinstitut.happycake.ui.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="de.syntaxinstitut.happycake.ui.CheckOutFragment"
+        android:label="CheckOutFragment" />
+    <fragment
+        android:id="@+id/goodbyeFragment"
+        android:name="de.syntaxinstitut.happycake.ui.GoodbyeFragment"
+        android:label="fragment_goodbye"
+        tools:layout="@layout/fragment_goodbye" />
 </navigation>
