@@ -17,9 +17,7 @@ class MainViewModel : ViewModel() {
 
     private val repository = CakeRepository(CakeApi)
 
-    private val _cake = MutableLiveData<List<cake>>()
-    val cake: MutableLiveData<List<cake>>
-        get() = _cake
+val cakes = repository.cakeList
 
     init {
 //        _cake.value = datasource.loadCake()
@@ -37,6 +35,3 @@ class MainViewModel : ViewModel() {
     }
 }
 
-class cake {
-
-}

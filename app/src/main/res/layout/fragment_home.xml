@@ -14,15 +14,14 @@
 
         <ImageView
             android:id="@+id/BackgroundHome"
-            android:layout_width="761dp"
-            android:layout_height="698dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.082"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.368"
             app:srcCompat="@drawable/onboarding_welcome" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -34,7 +33,11 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.497" />
+            app:layout_constraintVertical_bias="0.497"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_cake"
+            tools:itemCount="4"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
