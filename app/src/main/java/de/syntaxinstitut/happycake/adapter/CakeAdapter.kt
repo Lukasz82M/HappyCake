@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.net.toUri
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import de.syntaxinstitut.happycake.R
 import de.syntaxinstitut.happycake.data.model.Cake
 import de.syntaxinstitut.happycake.databinding.ItemCakeBinding
@@ -48,8 +50,9 @@ class CakeAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         // Setze das richtige Bild und den richtigen Namen
         val cake = dataset[position]
-       holder.ivPicture.setImageResource(dataset[position].imageResId)
-       holder.tvName.text = dataset[position].name
+        val imgUri = cake.imageSrc.toUri().buildUpon().scheme("http").build()
+
+        holder.ivPicture.load(imgUri)
 
         binding.textViewCake.setOnClickListener{holder.itemView.findNavController().navigate(
             HomeFragmentDirections.actionHomeFragmentToCakeDetailFragment()
