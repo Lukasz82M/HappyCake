@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModel
-import de.syntaxinstitut.happycake.MainActivity
 import de.syntaxinstitut.happycake.MainViewModel
 import de.syntaxinstitut.happycake.R
 import de.syntaxinstitut.happycake.adapter.CakeAdapter
@@ -31,17 +28,21 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     //(activity as MainActivity).showToolbar()
 
-    // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+    viewModel.loadData()
 
-   // binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+    // Inflate the layout for this fragment
+       // return inflater.inflate(R.layout.fragment_home, container, false)
+
+    binding = FragmentHomeBinding.inflate(inflater, container, false )
+
+   //binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 
     return binding.root
     }
 
     // Referenz um unseren Adapter zubefüllen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        super.onViewCreated(view, savedInstanceState)
 
 
         viewModel.cakes.observe(
@@ -51,7 +52,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.recyclerViewProdukte.adapter = CakeAdapter(it)
 
         }
-
+        Log.d("adapter",binding.recyclerViewProdukte.adapter.toString())
     }
 
 

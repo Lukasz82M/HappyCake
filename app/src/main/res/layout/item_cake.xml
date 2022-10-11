@@ -8,19 +8,20 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
         <ImageView
-            android:id="@+id/HappyBDay"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:id="@+id/RProdukt"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.454"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="0.464"
             app:srcCompat="@drawable/happybirthday" />
 
         <TextView
@@ -28,11 +29,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HappyBDay"
-            app:layout_constraintBottom_toBottomOf="@+id/HappyBDay"
+            app:layout_constraintBottom_toBottomOf="@+id/RProdukt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/HappyBDay"
+            app:layout_constraintTop_toTopOf="@+id/RProdukt"
             app:layout_constraintVertical_bias="0.89" />
 
         <TextView
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="49,99€"
-            app:layout_constraintBottom_toBottomOf="@+id/HappyBDay"
+            app:layout_constraintBottom_toBottomOf="@+id/RProdukt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCake" />

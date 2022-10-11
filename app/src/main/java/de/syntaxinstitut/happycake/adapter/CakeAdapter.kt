@@ -1,75 +1,74 @@
 package de.syntaxinstitut.happycake.adapter
 
 
+import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.core.net.toUri
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import de.syntaxinstitut.happycake.R
 import de.syntaxinstitut.happycake.data.model.Cake
 import de.syntaxinstitut.happycake.databinding.ItemCakeBinding
-import de.syntaxinstitut.happycake.ui.HomeFragmentDirections
 
-/**
- * Diese Klasse organisiert mithilfe der ViewHolder Klasse das Recycling
- *
- */
+// diesmal benötigt der Adapter den Context um auf die ColorResources zuzugreifen
 class CakeAdapter(
     private val dataset: List<Cake>
 ) : RecyclerView.Adapter<CakeAdapter.ItemViewHolder>() {
 
-    private lateinit var binding:ItemCakeBinding
+    //private var dataset = emptyList<Cake>()
 
-    /**
-     * der ViewHolder umfasst die View uns stellt einen Listeneintrag dar
-     */
-    inner class ItemViewHolder(binding: ItemCakeBinding) : RecyclerView.ViewHolder(binding.root){
-        val ivPicture: ImageView = itemView.findViewById(R.id.HappyBDay)
-        val tvName: TextView = itemView.findViewById(R.id.textViewCake)
+ /*   @SuppressLint("NotifyDataSetChanged")
+    fun submitList(list: List<Cake>) {
+        dataset = list
+        notifyDataSetChanged()
+    }*/
 
-}
-    /**
-     * hier werden neue ViewHolder erstellt
-     */
+    // der ViewHolder kann über die DatabBinding Variable auf alle Layoutelemente zugreifen
+    class ItemViewHolder(val binding: ItemCakeBinding) : RecyclerView.ViewHolder(binding.root)
+
+    // hier werden neue ViewHolder erstellt
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        TODO("Not yet implemented")
-        val binding = ItemCakeBinding
-            .inflate(LayoutInflater.from(parent.context), parent, false)
 
+        val binding = ItemCakeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+
+        // und in einem ViewHolder zurückgegeben
         return ItemViewHolder(binding)
     }
 
-    /**
-     * hier findet der Recyclingprozess statt
-     * die vom ViewHolder bereitgestellten Parameter erhalten die Information des Listeneintrags
-     */
+    // hier findet der Recyclingprozess statt
+    // die vom ViewHolder bereitgestellten Parameter werden verändert
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        // Setze das richtige Bild und den richtigen Namen
-        val cake = dataset[position]
-        val imgUri = cake.imageSrc.toUri().buildUpon().scheme("http").build()
+        // der aktuelle Artikel wird von der Liste geladen
+        val item = dataset[position]
 
-        holder.ivPicture.load(imgUri)
+//        holder.binding.fanImage.setImageResource(item.imageSrc)
 
-        binding.textViewCake.setOnClickListener{holder.itemView.findNavController().navigate(
-            HomeFragmentDirections.actionHomeFragmentToCakeDetailFragment()
-        )}
+        val imgUri = item.imageSrc.toUri().buildUpon().scheme("http").build()
 
-//Setze einen onClickListener auf das Layout und navigiere darin zum
-        /*holder.? Cake ?.setOnClickListener {
-            holder.itemView.findNavController().navigate(
-                HomeFragmentDirection.actionHomeFragmentTo
-            )
+        holder.binding.RProdukt.load(imgUri)
+        Log.d("img.",holder.binding.RProdukt.toString())
+
+        holder.binding.textViewCake.text = item.name
+        holder.binding.textViewPrice.text = "€${item.price}"
+
+//        if (item.sale) {
+//            holder.binding.fanSaleText.visibility = View.VISIBLE
+//            holder.binding.fanPriceText.setTextColor(ContextCompat.getColor(context, R.color.secondaryLightColor))
+//            holder.binding.fanPriceText.textSize = 24F
+//        } else {
+//            holder.binding.fanSaleText.visibility = View.GONE
+//            holder.binding.fanPriceText.setTextColor(ContextCompat.getColor(context, R.color.textColor))
+//            holder.binding.fanPriceText.textSize = 20F
+//        }
+
+      /*  holder.binding..setOnClickListener {
+//            holder.itemView.findNavController()
+//                .navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment(item.id))
         }*/
-
     }
 
-    /**
-     * damit der LayoutManager weiß, wie lang die Liste ist
-     */
+    // damit der LayoutManager weiß wie lang die Liste ist
     override fun getItemCount(): Int {
         return dataset.size
     }

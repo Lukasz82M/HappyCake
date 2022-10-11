@@ -24,7 +24,7 @@ val cakes = repository.cakeList
         loadData()
     }
 
-    private fun loadData() {
+    fun loadData() {
         viewModelScope.launch {
             repository.getCake()
         }
