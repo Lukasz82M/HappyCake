@@ -6,14 +6,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.net.toUri
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import de.syntaxinstitut.happycake.R
 import de.syntaxinstitut.happycake.data.model.Cake
 import de.syntaxinstitut.happycake.databinding.ItemCakeBinding
+import de.syntaxinstitut.happycake.ui.HomeFragmentDirections
 
 // diesmal benötigt der Adapter den Context um auf die ColorResources zuzugreifen
 class CakeAdapter(
@@ -31,22 +34,25 @@ class CakeAdapter(
     // der ViewHolder kann über die DatabBinding Variable auf alle Layoutelemente zugreifen
    // class ItemViewHolder(val binding: ItemCakeBinding) : RecyclerView.ViewHolder(binding.root)
 
-    inner class ItemViewHolder(view: View):RecyclerView.ViewHolder(view){
-        val cakeimg = itemView.findViewById<ImageView>(R.id.RProdukt)
+    inner class ItemViewHolder(val binding: ItemCakeBinding):RecyclerView.ViewHolder(binding.root){
+
+
+       /* val cakeimg = itemView.findViewById<ImageView>(R.id.RProdukt)
         val cakeText = itemView.findViewById<TextView>(R.id.textViewCake)
         val cakePrice = itemView.findViewById<TextView>(R.id.textViewPrice)
+        val weiter_button = itemView.findViewById<Button>(R.id.button_weiter)*/
 }
 
     // hier werden neue ViewHolder erstellt
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
 
-        val itemLayout = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_cake, parent, false)
+        //     val itemLayout = LayoutInflater.from(parent.context)
+        //    .inflate(R.layout.item_cake, parent, false)
 
-       // val binding = ItemCakeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-
+       val binding = ItemCakeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ItemViewHolder(binding)
         // und in einem ViewHolder zurückgegeben
-        return ItemViewHolder(itemLayout)
+       // return ItemViewHolder(itemLayout)
     }
 
     // hier findet der Recyclingprozess statt
@@ -56,38 +62,17 @@ class CakeAdapter(
         val item = dataset[position]
 
 
-//ToDO: bilder laden FUNKT nicht,
-// test aus anderem Projekt lädt auch nicht FEHLE DEAD OBJECT EXEPTION
-// Könnte das PROBLEM sein??? SAVE ERLEDIGT
-// INTERNET PERMISSEN IM MANIFEST?
-
-//        holder.binding.fanImage.setImageResource(item.imageSrc)
-/*val url = "https://public.syntax-institut.de/apps/AndreWagner/images/fan1.jpg"
-
-        val imgUri = url.toUri().buildUpon().scheme("http").build()
-        Log.d("image_debug",item.imageSrc)
-        holder.cakeimg.load(imgUri)*/
-
         val imgUri = item.imageSrc.toUri().buildUpon().scheme("https").build()
-        println("imgUri: $imgUri")
-        holder.cakeimg.load(imgUri)
-        holder.cakeText.text = item.name
-        holder.cakePrice.text = "€${item.price}"
+        //TEST
+        //println("imgUri: $imgUri")
+        holder.binding.RProdukt.load(imgUri)
+        holder.binding.textViewCake.text = item.name
+        holder.binding.textViewPrice.text = "€${item.price}"
 
-//        if (item.sale) {
-//            holder.binding.fanSaleText.visibility = View.VISIBLE
-//            holder.binding.fanPriceText.setTextColor(ContextCompat.getColor(context, R.color.secondaryLightColor))
-//            holder.binding.fanPriceText.textSize = 24F
-//        } else {
-//            holder.binding.fanSaleText.visibility = View.GONE
-//            holder.binding.fanPriceText.setTextColor(ContextCompat.getColor(context, R.color.textColor))
-//            holder.binding.fanPriceText.textSize = 20F
-//        }
-
-      /*  holder.binding..setOnClickListener {
-//            holder.itemView.findNavController()
-//                .navigate(HomeFragmentDirections.actionHomeFragmentToDetailFragment(item.id))
-        }*/
+        holder.binding.cardView.setOnClickListener {
+            holder.itemView.findNavController()
+               .navigate(HomeFragmentDirections.actionHomeFragmentToCakeDetailFragment(item.name))
+        }
     }
 
     // damit der LayoutManager weiß wie lang die Liste ist

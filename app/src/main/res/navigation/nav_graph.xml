@@ -30,7 +30,11 @@
     <fragment
         android:id="@+id/cakeDetailFragment"
         android:name="de.syntaxinstitut.happycake.ui.CakeDetailFragment"
-        android:label="CakeDetailFragment" />
+        android:label="CakeDetailFragment" >
+        <argument
+            android:name="cake_name"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="de.syntaxinstitut.happycake.ui.OnBoardingFragment"

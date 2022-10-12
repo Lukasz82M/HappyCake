@@ -11,47 +11,55 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/RProdukt"
-            android:layout_width="400dp"
-            android:layout_height="400dp"
-            android:scaleType="centerCrop"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="410dp"
+            android:layout_height="494dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.464"
-            app:srcCompat="@drawable/happybirthday" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textViewPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="49,99€"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="@+id/RProdukt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCake"
-            app:layout_constraintVertical_bias="1.0" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="516dp">
 
+                <TextView
+                    android:id="@+id/textViewCake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HappyBDay"
+                    android:textColor="#DF072B"
+                    android:textSize="34sp"
+                    android:textStyle="normal|bold|italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.878" />
 
-        <TextView
-            android:id="@+id/textViewCake"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="HappyBDay"
-            android:textColor="#DF072B"
-            android:textSize="34sp"
-            android:textStyle="normal|bold|italic"
-            app:layout_constraintBottom_toBottomOf="@+id/RProdukt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/RProdukt"
-            app:layout_constraintVertical_bias="0.89" />
+                <TextView
+                    android:id="@+id/textViewPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp"
+                    android:text="49,99€"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewCake" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/RProdukt"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/happybirthday" />
+        </androidx.cardview.widget.CardView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
