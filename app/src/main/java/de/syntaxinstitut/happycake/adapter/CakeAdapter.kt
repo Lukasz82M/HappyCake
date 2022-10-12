@@ -68,7 +68,9 @@ class CakeAdapter(
         Log.d("image_debug",item.imageSrc)
         holder.cakeimg.load(imgUri)*/
 
-
+        val imgUri = item.imageSrc.toUri().buildUpon().scheme("https").build()
+        println("imgUri: $imgUri")
+        holder.cakeimg.load(imgUri)
         holder.cakeText.text = item.name
         holder.cakePrice.text = "€${item.price}"
 
