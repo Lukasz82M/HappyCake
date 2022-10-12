@@ -30,26 +30,15 @@
                 app:srcCompat="@drawable/onboarding_welcome" />
 
             <ImageView
-                android:id="@+id/in_bearbeitung"
-                android:layout_width="294dp"
-                android:layout_height="118dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.41"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.742"
-                app:srcCompat="@drawable/in_bearbeitung" />
-
-            <ImageView
                 android:id="@+id/detail_Img"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                app:layout_constraintBottom_toTopOf="@+id/in_bearbeitung"
+                app:layout_constraintBottom_toTopOf="@+id/detail_button"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.432"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.153"
+                app:layout_constraintVertical_bias="0.015"
                 app:srcCompat="@drawable/happybirthday" />
 
             <TextView
@@ -87,8 +76,19 @@
                 android:text="Weiter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="386dp"
+                android:layout_height="171dp"
+                app:layout_constraintBottom_toTopOf="@+id/detail_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.64"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/in_bearbeitung" />
+                app:layout_constraintTop_toBottomOf="@+id/detail_Img"
+                app:layout_constraintVertical_bias="0.784"
+                app:srcCompat="@drawable/_584989859" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
