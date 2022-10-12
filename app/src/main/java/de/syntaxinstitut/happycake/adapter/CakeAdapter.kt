@@ -56,15 +56,16 @@ class CakeAdapter(
         val item = dataset[position]
 
 
-//ToDO: bilder laden FUNKT nich,
+//ToDO: bilder laden FUNKT nicht,
 // test aus anderem Projekt lädt auch nicht FEHLE DEAD OBJECT EXEPTION
-// Könnte das PRONBLEM sein??? INTERNET PERMISSEN IM MANIFEST?
+// Könnte das PROBLEM sein??? SAVE ERLEDIGT
+// INTERNET PERMISSEN IM MANIFEST?
 
 //        holder.binding.fanImage.setImageResource(item.imageSrc)
 /*val url = "https://public.syntax-institut.de/apps/AndreWagner/images/fan1.jpg"
 
         val imgUri = url.toUri().buildUpon().scheme("http").build()
-    Log.d("image_debug",item.imageSrc)
+        Log.d("image_debug",item.imageSrc)
         holder.cakeimg.load(imgUri)*/
 
 

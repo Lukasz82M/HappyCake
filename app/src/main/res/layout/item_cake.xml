@@ -13,8 +13,8 @@
 
         <ImageView
             android:id="@+id/RProdukt"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,10 +29,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="49,99€"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/RProdukt"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCake" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewCake"
+            app:layout_constraintVertical_bias="1.0" />
 
 
         <TextView
@@ -40,13 +43,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HappyBDay"
+            android:textColor="#DF072B"
+            android:textSize="34sp"
+            android:textStyle="normal|bold|italic"
             app:layout_constraintBottom_toBottomOf="@+id/RProdukt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/RProdukt"
-            app:layout_constraintVertical_bias="0.89"
-            android:textColor="#DF072B"/>
+            app:layout_constraintVertical_bias="0.89" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
