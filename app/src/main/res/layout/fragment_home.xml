@@ -51,7 +51,7 @@
 
             <TextView
                 android:id="@+id/ChooseYourCake"
-                android:layout_width="350dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:alpha="2"
                 android:fontFamily="serif"
@@ -60,7 +60,7 @@
                 android:rotationY="1"
                 android:text="Choose your Cake"
                 android:textColor="@color/white"
-                android:textSize="40sp"
+                android:textSize="24sp"
                 tools:textStyle="italic" />
         </androidx.cardview.widget.CardView>
 
