@@ -9,11 +9,13 @@ import androidx.core.net.toUri
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import coil.load
 import de.syntaxinstitut.happycake.MainViewModel
 import de.syntaxinstitut.happycake.R
 import de.syntaxinstitut.happycake.databinding.FragmentCakeDetailBinding
 import de.syntaxinstitut.happycake.databinding.FragmentOnBoardingBinding
+import de.syntaxinstitut.happycake.ui.firebase.LoginFragmentDirections
 
 
 class CakeDetailFragment : Fragment() {
@@ -40,6 +42,10 @@ class CakeDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.detailButton.setOnClickListener{
+            findNavController().navigate(CakeDetailFragmentDirections.actionCakeDetailFragmentToFormularFragment())
+        }
 
         viewmodel.cakes.observe(
             viewLifecycleOwner, Observer {

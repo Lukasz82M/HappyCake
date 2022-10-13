@@ -7,7 +7,8 @@
     <fragment
         android:id="@+id/LoginFragment"
         android:name="de.syntaxinstitut.happycake.ui.firebase.LoginFragment"
-        android:label="LoginFragment" >
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login_" >
         <action
             android:id="@+id/action_LoginFragment_to_homeFragment"
             app:destination="@id/HomeFragment" />
@@ -18,7 +19,8 @@
     <fragment
         android:id="@+id/HomeFragment"
         android:name="de.syntaxinstitut.happycake.ui.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_HomeFragment_to_cakeDetailFragment"
             app:destination="@id/cakeDetailFragment" />
@@ -26,11 +28,13 @@
     <fragment
         android:id="@+id/SignUpFragment"
         android:name="de.syntaxinstitut.happycake.ui.firebase.SignUpFragment"
-        android:label="SignUpFragment" />
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up"/>
     <fragment
         android:id="@+id/cakeDetailFragment"
         android:name="de.syntaxinstitut.happycake.ui.CakeDetailFragment"
-        android:label="CakeDetailFragment" >
+        android:label="CakeDetailFragment"
+        tools:layout="@layout/fragment_cake_detail" >
         <argument
             android:name="cake_name"
             app:argType="string" />
@@ -41,7 +45,8 @@
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="de.syntaxinstitut.happycake.ui.OnBoardingFragment"
-        android:label="OnBoardingFragment" >
+        android:label="OnBoardingFragment"
+        tools:layout="@layout/fragment_on_boarding" >
         <action
             android:id="@+id/action_onBoardingFragment_to_LoginFragment"
             app:destination="@id/LoginFragment" />
@@ -49,7 +54,8 @@
     <fragment
         android:id="@+id/formularFragment"
         android:name="de.syntaxinstitut.happycake.ui.FormularFragment"
-        android:label="FormularFragment" >
+        android:label="FormularFragment"
+        tools:layout="@layout/fragment_formular" >
         <action
             android:id="@+id/action_formularFragment_to_paymentFragment"
             app:destination="@id/paymentFragment" />
@@ -66,7 +72,8 @@
     <fragment
         android:id="@+id/checkOutFragment"
         android:name="de.syntaxinstitut.happycake.ui.CheckOutFragment"
-        android:label="CheckOutFragment" >
+        android:label="CheckOutFragment"
+        tools:layout="@layout/fragment_check_out" >
         <action
             android:id="@+id/action_checkOutFragment_to_goodbyeFragment"
             app:destination="@id/goodbyeFragment" />

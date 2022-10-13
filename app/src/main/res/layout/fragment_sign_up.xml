@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="numberPassword"
+            android:inputType="textPassword"
             android:text="password"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
