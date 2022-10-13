@@ -34,6 +34,9 @@
         <argument
             android:name="cake_name"
             app:argType="string" />
+        <action
+            android:id="@+id/action_cakeDetailFragment_to_formularFragment"
+            app:destination="@id/formularFragment" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
@@ -46,16 +49,28 @@
     <fragment
         android:id="@+id/formularFragment"
         android:name="de.syntaxinstitut.happycake.ui.FormularFragment"
-        android:label="FormularFragment" />
+        android:label="FormularFragment" >
+        <action
+            android:id="@+id/action_formularFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/paymentFragment"
         android:name="de.syntaxinstitut.happycake.ui.PaymentFragment"
         android:label="fragment_payment"
-        tools:layout="@layout/fragment_payment" />
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_checkOutFragment"
+            app:destination="@id/checkOutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/checkOutFragment"
         android:name="de.syntaxinstitut.happycake.ui.CheckOutFragment"
-        android:label="CheckOutFragment" />
+        android:label="CheckOutFragment" >
+        <action
+            android:id="@+id/action_checkOutFragment_to_goodbyeFragment"
+            app:destination="@id/goodbyeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/goodbyeFragment"
         android:name="de.syntaxinstitut.happycake.ui.GoodbyeFragment"
