@@ -12,88 +12,99 @@
 
         <ImageView
             android:id="@+id/backgroundPayment"
-            android:layout_width="425dp"
-            android:layout_height="754dp"
+            android:layout_width="485dp"
+            android:layout_height="668dp"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.213"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/onboarding_welcome"
-            tools:scaleType="fitXY" />
+            app:layout_constraintVertical_bias="0.242"
+            app:srcCompat="@drawable/onboarding_welcome" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/cardViewPayment"
+            android:layout_width="230dp"
+            android:layout_height="380dp"
             android:backgroundTint="#70000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/backgroundPayment"
-            app:layout_constraintVertical_bias="0.08"
+            app:layout_constraintVertical_bias="0.415"
             tools:alpha="1">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="serif"
-                android:text="PAYMENT"
-                android:textColor="@color/white"
-                tools:textSize="40"
-                tools:textStyle="italic" />
         </androidx.cardview.widget.CardView>
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radio_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginBottom="16dp"
             android:text="Bankeinzug"
+            app:layout_constraintBottom_toTopOf="@+id/radio_button2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/radio_button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:text="Rechnung"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton" />
+            app:layout_constraintTop_toBottomOf="@+id/radio_button3"
+            app:layout_constraintVertical_bias="0.102" />
 
         <RadioButton
-            android:id="@+id/radioButton7"
+            android:id="@+id/radio_button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="366dp"
             android:text="PayPal"
+            app:layout_constraintBottom_toBottomOf="@+id/backgroundPayment"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton6" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButton8"
+            android:id="@+id/radio_button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="BTC"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton7" />
+            app:layout_constraintTop_toBottomOf="@+id/radio_button2" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button_weiter_payment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:text="Button"
-            app:layout_constraintBottom_toBottomOf="@+id/backgroundPayment"
+            android:text="Weiter"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_button1" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="PAYMENT"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/radio_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.136"
+            tools:textSize="40dp"
+            tools:textStyle="italic" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

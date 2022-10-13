@@ -20,12 +20,27 @@
                 android:id="@+id/backgroundCheckOut"
                 android:layout_width="419dp"
                 android:layout_height="798dp"
+                android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/onboarding_welcome"
-                tools:scaleType="fitXY" />
+                app:srcCompat="@drawable/onboarding_welcome" />
+
+            <TextView
+                android:id="@+id/Check_Your_Order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Check your Order"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="normal|bold|italic"
+                app:layout_constraintBottom_toTopOf="@+id/Address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                app:layout_constraintVertical_bias="0.243" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
@@ -38,15 +53,6 @@
                 app:layout_constraintTop_toTopOf="@+id/backgroundCheckOut"
                 app:layout_constraintVertical_bias="0.08">
 
-                <TextView
-                    android:id="@+id/Check_Your_Order"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="serif"
-                    android:text="Check your Order"
-                    android:textColor="@color/white"
-                    android:textSize="40sp"
-                    android:textStyle="normal|bold|italic" />
             </androidx.cardview.widget.CardView>
 
             <EditText
@@ -98,8 +104,10 @@
                 android:text="Name"
                 app:layout_constraintBottom_toTopOf="@+id/Address"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                app:layout_constraintVertical_bias="0.766" />
 
             <Button
                 android:id="@+id/button"

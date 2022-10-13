@@ -21,14 +21,14 @@
                 android:id="@+id/backgroundFormular"
                 android:layout_width="425dp"
                 android:layout_height="754dp"
+                android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/onboarding_welcome"
-                tools:scaleType="fitXY" />
+                app:srcCompat="@drawable/onboarding_welcome" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
@@ -53,6 +53,17 @@
                     android:textStyle="normal|bold|italic" />
 
             </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="416dp"
+                android:layout_height="355dp"
+                android:backgroundTint="#70000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.142"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <RadioButton
                 android:id="@+id/RadioButton"

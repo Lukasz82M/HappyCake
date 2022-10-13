@@ -14,12 +14,12 @@
             android:id="@+id/backgroundCakeItem"
             android:layout_width="425dp"
             android:layout_height="756dp"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/onboarding_welcome"
-            tools:scaleType="fitXY" />
+            app:srcCompat="@drawable/onboarding_welcome" />
 
         <ImageView
             android:id="@+id/DankeLogo"
