@@ -44,18 +44,7 @@ class FormularFragment : Fragment() {
 
             binding.weiter.setOnClickListener { findNavController().navigate(FormularFragmentDirections.actionFormularFragmentToPaymentFragment()) }
 
-            viewmodel.cakes.observe(
-                viewLifecycleOwner, Observer {
-                        list ->
-                    val cake = list.find { it.name == cake_name }
-                    if (cake != null){
-                        binding.radioButton2.buttonDrawable
-                        binding.RadioButton.buttonDrawable
-                        binding.weiter.isClickable
 
                     }
                 }
-            )
-        }
 
-    }
