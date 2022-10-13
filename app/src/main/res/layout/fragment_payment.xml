@@ -18,8 +18,8 @@
 
             <ImageView
                 android:id="@+id/backgroundPayment"
-                android:layout_width="485dp"
-                android:layout_height="668dp"
+                android:layout_width="463dp"
+                android:layout_height="757dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -31,14 +31,15 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewPayment"
-                android:layout_width="230dp"
-                android:layout_height="380dp"
+                android:layout_width="216dp"
+                android:layout_height="370dp"
                 android:backgroundTint="#70000000"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/backgroundPayment"
-                app:layout_constraintVertical_bias="0.415"
+                app:layout_constraintVertical_bias="0.615"
                 tools:alpha="1">
 
             </androidx.cardview.widget.CardView>
@@ -64,7 +65,7 @@
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/radio_button3"
-                app:layout_constraintVertical_bias="0.102" />
+                app:layout_constraintVertical_bias="0.060000002" />
 
             <RadioButton
                 android:id="@+id/radio_button2"
@@ -90,27 +91,28 @@
                 android:id="@+id/button_weiter_payment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:text="Weiter"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radio_button1" />
+                app:layout_constraintHorizontal_bias="0.500"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="223dp"
+                android:layout_height="57dp"
                 android:fontFamily="serif"
                 android:text="PAYMENT"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
+                android:textStyle="normal|bold|italic"
                 app:layout_constraintBottom_toTopOf="@+id/radio_button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.136"
-                tools:textSize="40dp"
-                tools:textStyle="italic" />
+                app:layout_constraintVertical_bias="0.13"
+                tools:textSize="40dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
