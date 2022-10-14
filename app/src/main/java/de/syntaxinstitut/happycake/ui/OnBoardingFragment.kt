@@ -32,7 +32,7 @@ class OnBoardingFragment : Fragment() {
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
             findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToLoginFragment())
-        },5000)
+        },6000)
             return  binding.root
     }
 
