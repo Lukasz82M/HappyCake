@@ -3,6 +3,7 @@ package de.syntaxinstitut.happycake
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.PagerSnapHelper
 import de.syntaxinstitut.happycake.databinding.ActivityMainBinding
 
 /**
@@ -27,5 +28,9 @@ class MainActivity : AppCompatActivity() {
 
         // Das Binding zur XML-Datei
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        //SnapHelper justiert das Bild bzw ResyclerView beim Horizontalem scrollen.
+        //val snapHelper = PagerSnapHelper()
+        //snapHelper.attachToRecyclerView(binding.coinRV)
     }
 }
