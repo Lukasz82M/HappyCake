@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.PagerSnapHelper
 import de.syntaxinstitut.happycake.MainViewModel
 import de.syntaxinstitut.happycake.R
 import de.syntaxinstitut.happycake.adapter.CakeAdapter
@@ -52,8 +53,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.recyclerViewProdukte.adapter = CakeAdapter(it)
 
         }
+        //SnapHelper justiert das Bild bzw ResyclerView beim Horizontalem scrollen.
+
+        val snapHelper = PagerSnapHelper()
+        snapHelper.attachToRecyclerView(binding.recyclerViewProdukte)
+
         Log.d("adapter",binding.recyclerViewProdukte.adapter.toString())
     }
+
 
 
 }

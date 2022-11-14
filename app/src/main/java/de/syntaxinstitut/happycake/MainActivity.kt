@@ -29,8 +29,6 @@ class MainActivity : AppCompatActivity() {
         // Das Binding zur XML-Datei
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        //SnapHelper justiert das Bild bzw ResyclerView beim Horizontalem scrollen.
-        //val snapHelper = PagerSnapHelper()
-        //snapHelper.attachToRecyclerView(binding.coinRV)
+
     }
 }
