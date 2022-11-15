@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/backgroundLSignup"
-            android:layout_width="471dp"
-            android:layout_height="780dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

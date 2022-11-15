@@ -20,8 +20,8 @@
 
             <ImageView
                 android:id="@+id/backgroundLogin"
-                android:layout_width="481dp"
-                android:layout_height="733dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
