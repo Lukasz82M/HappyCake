@@ -75,7 +75,7 @@
             <RadioButton
                 android:id="@+id/RadioButton"
                 android:layout_width="151dp"
-                android:layout_height="46dp"
+                android:layout_height="48dp"
                 android:fontFamily="serif"
                 android:text="Laktosefrei"
                 android:textSize="20sp"
