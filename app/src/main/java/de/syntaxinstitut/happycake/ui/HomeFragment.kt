@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.SharedElementCallback
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.PagerSnapHelper
 import de.syntaxinstitut.happycake.MainViewModel
@@ -32,11 +33,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     viewModel.loadData()
 
     // Inflate the layout for this fragment
-       // return inflater.inflate(R.layout.fragment_home, container, false)
+    // return inflater.inflate(R.layout.fragment_home, container, false)
 
     binding = FragmentHomeBinding.inflate(inflater, container, false )
 
-   //binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+    //binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
 
     return binding.root
     }
@@ -45,6 +46,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+    val backindex = requireArguments().getInt("backIndex")
 
         viewModel.cakes.observe(
                 viewLifecycleOwner,
@@ -58,9 +60,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val snapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(binding.recyclerViewProdukte)
 
-        Log.d("adapter",binding.recyclerViewProdukte.adapter.toString())
-    }
+        if (backindex >=0){
+            binding.recyclerViewProdukte.scrollToPosition(backindex)
+        }
 
+        //Log.d("adapter",binding.recyclerViewProdukte.adapter.toString())
+    }
 
 
 }

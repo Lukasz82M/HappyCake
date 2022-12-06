@@ -54,6 +54,7 @@ class CakeDetailFragment : Fragment() {
                 if (cake != null){
                     binding.detailName.text = cake_name
                     binding.detailPrice.text = cake.price.toString()
+                    binding.detailText.text = cake.detail
                     val imgUri = cake.imageSrc.toUri().buildUpon().scheme("https").build()
                     binding.detailImg.load(imgUri)
                 }

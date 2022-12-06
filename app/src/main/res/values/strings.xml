@@ -2,4 +2,48 @@
     <string name="app_name">Happy Cake</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+        <string-array name="Payment">
+            <item>BTC</item>
+            <item>PayPal</item>
+            <item>Vorkasse</item>
+            <item>Rechnung</item>
+            <item>Sepa</item>
+        </string-array>
+
+    <string-array name="Konfiguration">
+        <item>keine Allergie</item>
+        <item>Laktosefrei</item>
+        <item>Gluteinfrei</item>
+        <item>Nussallergie</item>
+        <item>ohne Alkohol</item>
+        <item>sonstige Allergie</item>
+    </string-array>
+    <string-array name="Konfiguration2">
+        <item>Rechteckig</item>
+        <item>32cm</item>
+        <item>26cm</item>
+        <item>24cm</item>
+        <item>20cm</item>
+    </string-array>
+    <string-array name="Konfiguration3">
+        <item>mit Schokocremfüllung </item>
+        <item>mit Vanillecremfüllung</item>
+        <item>mit Himbeerecremfüllung</item>
+        <item>mit Kirchcremfüllung</item>
+        <item>mit Erdbeercremfüllung</item>
+    </string-array>
+    <string-array name="Konfiguration4">
+        <item>---</item>
+        <item>---</item>
+        <item>---</item>
+        <item>---</item>
+        <item>---</item>
+    </string-array>
+    <string-array name="Konfiguration5">
+        <item>---</item>
+        <item>---</item>
+        <item>---</item>
+        <item>---</item>
+        <item>---</item>
+    </string-array>
 </resources>

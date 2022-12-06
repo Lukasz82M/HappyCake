@@ -20,10 +20,18 @@
         android:id="@+id/HomeFragment"
         android:name="de.syntaxinstitut.happycake.ui.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_HomeFragment_to_cakeDetailFragment"
-            app:destination="@id/cakeDetailFragment" />
+            app:destination="@id/cakeDetailFragment"/>
+            <!--status
+
+            app:popUpToSaveState="true"
+            app:restoreState="true"-->
+        <argument
+            android:name="backIndex"
+            app:argType="integer"
+            android:defaultValue="-1" />
     </fragment>
     <fragment
         android:id="@+id/SignUpFragment"
@@ -41,6 +49,9 @@
         <action
             android:id="@+id/action_cakeDetailFragment_to_formularFragment"
             app:destination="@id/formularFragment" />
+        <action
+            android:id="@+id/action_cakeDetailFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"

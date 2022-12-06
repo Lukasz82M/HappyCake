@@ -26,27 +26,41 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.503"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/onboarding_welcome" />
 
-            <ImageView
-                android:id="@+id/detail_Img"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
                 android:layout_width="0dp"
-                android:layout_height="350dp"
-                app:layout_constraintBottom_toTopOf="@+id/detail_button"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#702C2C2C"
+                app:cardCornerRadius="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/detail_Img"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.432"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.015"
-                app:srcCompat="@drawable/happybirthday" />
+                app:layout_constraintTop_toTopOf="@+id/backgroundCakeDetail">
+
+                <ImageView
+                    android:id="@+id/detail_Img"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/happybirthday" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/detail_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="HappyBDay"
-                android:textSize="16sp"
+                android:textSize="24sp"
                 android:textStyle="normal|bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/detail_price"
@@ -59,15 +73,17 @@
                 android:id="@+id/detail_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:text="11.11€"
-                android:textSize="16sp"
+                android:textSize="24sp"
                 android:textStyle="normal|bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.809"
+                app:layout_constraintHorizontal_bias="0.949"
                 app:layout_constraintStart_toStartOf="@+id/backgroundCakeDetail"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.554" />
+                app:layout_constraintVertical_bias="0.553" />
 
             <Button
                 android:id="@+id/detail_button"
@@ -75,22 +91,45 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="Weiter"
+                app:cornerRadius="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.500"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="386dp"
-                android:layout_height="171dp"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="30dp"
                 app:layout_constraintBottom_toTopOf="@+id/detail_button"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.64"
+                app:layout_constraintHorizontal_bias="0.500"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/detail_Img"
-                app:layout_constraintVertical_bias="0.784"
-                app:srcCompat="@drawable/_584989859" />
+                app:layout_constraintTop_toBottomOf="@+id/detail_name">
+
+                <TextView
+                    android:id="@+id/detail_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="72dp"
+                    android:layout_marginBottom="8dp"
+                    android:elegantTextHeight="true"
+                    android:text="Detail Beschreibung"
+                    android:textSize="20dp"
+                    android:textStyle="normal|bold|italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>

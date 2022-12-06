@@ -33,71 +33,28 @@
                 android:id="@+id/cardViewPayment"
                 android:layout_width="396dp"
                 android:layout_height="360dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:backgroundTint="#70000000"
+                app:cardCornerRadius="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintHorizontal_bias="0.50"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/backgroundPayment"
-                app:layout_constraintVertical_bias="0.642"
+                app:layout_constraintVertical_bias="0.50"
                 tools:alpha="1">
 
+                <Spinner
+                    android:id="@+id/spinner_Payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="123dp"
+                    android:entries="@array/Payment"
+                    android:spinnerMode="dropdown"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
             </androidx.cardview.widget.CardView>
-
-            <RadioButton
-                android:id="@+id/radio_button"
-                android:layout_width="160dp"
-                android:layout_height="40dp"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="serif"
-                android:text="Bankeinzug"
-                android:textSize="20sp"
-                android:textStyle="normal|bold|italic"
-                app:layout_constraintBottom_toTopOf="@+id/radio_button2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <RadioButton
-                android:id="@+id/radio_button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rechnung"
-                android:textSize="20sp"
-                android:textStyle="normal|bold|italic"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radio_button3"
-                app:layout_constraintVertical_bias="0.060000002"
-                tools:fontFamily="serif" />
-
-            <RadioButton
-                android:id="@+id/radio_button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="366dp"
-                android:fontFamily="serif"
-                android:text="PayPal"
-                android:textSize="20sp"
-                android:textStyle="normal|bold|italic"
-                app:layout_constraintBottom_toBottomOf="@+id/backgroundPayment"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <RadioButton
-                android:id="@+id/radio_button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="serif"
-                android:text="BTC"
-                android:textSize="20sp"
-                android:textStyle="normal|bold|italic"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radio_button2" />
 
             <Button
                 android:id="@+id/button_weiter_payment"
@@ -105,6 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="Weiter"
+                app:cornerRadius="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.500"

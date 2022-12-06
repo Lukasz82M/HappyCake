@@ -69,6 +69,9 @@ class CakeAdapter(
         holder.binding.textViewCake.text = item.name
         holder.binding.textViewPrice.text = "€${item.price}"
 
+
+
+
         holder.binding.cardView.setOnClickListener {
             holder.itemView.findNavController()
                .navigate(HomeFragmentDirections.actionHomeFragmentToCakeDetailFragment(item.name))
