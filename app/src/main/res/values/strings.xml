@@ -3,14 +3,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
         <string-array name="Payment">
+            <item>Vorkasse</item>
             <item>BTC</item>
             <item>PayPal</item>
-            <item>Vorkasse</item>
             <item>Rechnung</item>
             <item>Sepa</item>
+            <item>Bezahlung bei Abholung</item>
+            <item>Bezahlung bei Lieferung</item>
         </string-array>
 
     <string-array name="Konfiguration">
+        <item>--------------</item>
         <item>keine Allergie</item>
         <item>Laktosefrei</item>
         <item>Gluteinfrei</item>
@@ -19,31 +22,40 @@
         <item>sonstige Allergie</item>
     </string-array>
     <string-array name="Konfiguration2">
+        <item>--------------</item>
+        <item>Standard</item>
         <item>Rechteckig</item>
+        <item>Fototorte</item>
         <item>32cm</item>
         <item>26cm</item>
         <item>24cm</item>
         <item>20cm</item>
     </string-array>
     <string-array name="Konfiguration3">
-        <item>mit Schokocremfüllung </item>
+        <item>--------------</item>
+        <item>Standard</item>
+        <item>mit Schokocremfüllung</item>
         <item>mit Vanillecremfüllung</item>
         <item>mit Himbeerecremfüllung</item>
         <item>mit Kirchcremfüllung</item>
         <item>mit Erdbeercremfüllung</item>
+        <item>mit Buttercremfüllung</item>
+
     </string-array>
     <string-array name="Konfiguration4">
-        <item>---</item>
-        <item>---</item>
-        <item>---</item>
-        <item>---</item>
-        <item>---</item>
+        <item>--------------</item>
+        <item>Standard</item>
+        <item>Geburtstag</item>
+        <item>Hochzeit</item>
+        <item>Kommunion</item>
+        <item>Jubileum</item>
+        <item>Wunschtext</item>
+        <item>Wunschtorte</item>
     </string-array>
     <string-array name="Konfiguration5">
-        <item>---</item>
-        <item>---</item>
-        <item>---</item>
-        <item>---</item>
-        <item>---</item>
+        <item>--------------</item>
+        <item>mit Kerzen </item>
+        <item>mit Karte</item>
+        <item>mit Geschenk</item>
     </string-array>
 </resources>
