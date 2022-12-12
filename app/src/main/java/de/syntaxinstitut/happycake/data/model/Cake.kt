@@ -1,5 +1,7 @@
 package de.syntaxinstitut.happycake.data.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 
 /**
@@ -10,8 +12,11 @@ import com.squareup.moshi.Json
  *  @param detail die resource ID die Beschreibungen der Torten
  */
 
+@Entity
 data class Cake(
-    // val id: Long,
+     //musste rausgenommen werden
+    //val id: Long,
+    @PrimaryKey
     val name: String,
     val price: Double,
     val imageSrc: String,
