@@ -1,5 +1,5 @@
 
-package de.syntaxinstitut.happycake.data.model.local
+package de.syntaxinstitut.happycake.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

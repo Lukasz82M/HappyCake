@@ -1,4 +1,4 @@
-package de.syntaxinstitut.happycake.data.model.local
+package de.syntaxinstitut.happycake.data.local
 
 import android.content.Context
 import androidx.room.Database
