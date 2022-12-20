@@ -3,17 +3,19 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
         <string-array name="Payment">
+            <item>Bitte wählen Sie Ihre Zahlungsart</item>
+            <item>Bezahlung bei Abholung</item>
+            <item>Bezahlung bei Lieferung</item>
             <item>Vorkasse</item>
             <item>BTC</item>
             <item>PayPal</item>
             <item>Rechnung</item>
             <item>Sepa</item>
-            <item>Bezahlung bei Abholung</item>
-            <item>Bezahlung bei Lieferung</item>
+
         </string-array>
 
     <string-array name="Konfiguration">
-        <item>--------------</item>
+        <item>Bitte wählen Sie</item>
         <item>keine Allergie</item>
         <item>Laktosefrei</item>
         <item>Gluteinfrei</item>
@@ -22,7 +24,7 @@
         <item>sonstige Allergie</item>
     </string-array>
     <string-array name="Konfiguration2">
-        <item>--------------</item>
+        <item>Bitte wählen Sie</item>
         <item>Standard</item>
         <item>Rechteckig</item>
         <item>Fototorte</item>
@@ -32,7 +34,7 @@
         <item>20cm</item>
     </string-array>
     <string-array name="Konfiguration3">
-        <item>--------------</item>
+        <item>Bitte wählen Sie</item>
         <item>Standard</item>
         <item>mit Schokocremfüllung</item>
         <item>mit Vanillecremfüllung</item>
@@ -43,7 +45,7 @@
 
     </string-array>
     <string-array name="Konfiguration4">
-        <item>--------------</item>
+        <item>Bitte wählen Sie</item>
         <item>Standard</item>
         <item>Geburtstag</item>
         <item>Hochzeit</item>
@@ -53,7 +55,7 @@
         <item>Wunschtorte</item>
     </string-array>
     <string-array name="Konfiguration5">
-        <item>--------------</item>
+        <item>Bitte wählen Sie</item>
         <item>mit Kerzen </item>
         <item>mit Karte</item>
         <item>mit Geschenk</item>
